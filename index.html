@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="scroll-button">
+    <a href="#home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <nav>
+    <div class="navbar">
+      <div class="logo"><a href="#">Profile</a></div>
+      <ul class="menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <div class="cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+      </ul>
+    </div>
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+  </nav>
+
+<!-- Home Section Start -->
+ <section class="home" id="home">
+   <div class="home-content">
+     <div class="text">
+       <div class="text-one">Hello,</div>
+       <div class="text-two">I am Merinkanth N</div>
+       <div class="text-three">Student</div>
+       <div class="text-four">From Erode</div>
+     </div>
+    
+ </section>
+
+<!-- About Section Start -->
+<section class="about" id="about">
+  <div class="content">
+    <div class="title"><span>About Me</span></div>
+  <div class="about-details">
+    <div class="left">
+      <img src="merin.jpg" alt="Merin picture">
+    </div>
+    <div class="right">
+      <div class="topic"></div>
+      <p> I am Currently Pursuing 2nd Yr of <b>BTech Information Technology</b> at Knowledge Institute of Technology, Salem. I am very much interested in both Programming and Product Development.  I have completed my <b>Python</b> Course in the year of 2022.  </p>
+      <div class="button">
+      
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<section class="skills" id="skills">
+ <div class="content">
+   <div class="title"><span>My Skills</span></div>
+   <div class="skills-details">
+     <div class="text">
+       <div class="topic"><b>Skills Reflects Our Knowledge</b></div>
+       <p></p>
+       
+     </div>
+     <div class="boxes">
+       <div class="box">
+         <div class="topic">Programming</div>
+         <div class="per">80%</div>
+       </div>
+       <div class="box">
+         <div class="topic">Stock Analysis</div>
+         <div class="per">75%</div>
+       </div>
+       <div class="box">
+         <div class="topic">Product Development</div>
+         <div class="per">60%</div>
+       </div>
+       <div class="box">
+        <div class="topic">Problem Solving</div>
+        <div class="per">75%</div>
+       </div>
+      
+ </div>
+</section>
+<section class="contact" id="contact"> 
+  <h1 class="heading"> CONTACT ME</h1>
+  <div class="icons-container">
+      <div class="icons">
+          <ion-icon name="mail-outline"></ion-icon>
+          <h3>MY EMAIL</h3>
+          <p>merinkanthnagaraj@gmail.com</p>
+      </div> 
+      <div class="icons">
+          <ion-icon name="call-outline"></ion-icon>
+          <h3>MY NUMBER</h3>
+          <p>9965994040</p>
+      </div> 
+      <div class="icons">
+          <ion-icon name="location-outline"></ion-icon>
+          <h3>MY ADDRESS</h3>
+          <p>Pallipalayam, Erode</p>
+      </div> 
+      
+  </div>
+
+  <div class="row">
+    <form action="send()" onsubmit="send(); reset(); return false">
+          <input type="text" placeholder="enter your name" class="box" id="Name">
+          <input type="email" placeholder="enter your email" class="box" id="Email">
+          <input type="text" placeholder="enter your Number" class="box" id="Contact">
+          <input type="text" placeholder="enter the subject" class="box" id="Subject">
+          <textarea name="" placeholder="message" id="message" cols="30" rows="10"></textarea>
+          <button type="submit" class="btn" >Send <i class="fas fa-paper-plane"></i></button>
+      </form>  
+      
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+      <script>
+
+        function send(){
+                  let name = document.getElementById("Name").value; 
+                  let email = document.getElementById("Email").value;
+                  let contact = document.getElementById("Contact").value;
+                  let subject = document.getElementById("Subject").value; 
+                  let message = document.getElementById("message").value;
+
+                Email.send({
+                    SecureToken : "81787270-0db9-41f5-8746-d726179dc935",
+                    To : 'merinkanthnagaraj@gmail.com',
+                    From : "merinkanthnagaraj@gmail.com",
+                    Subject : "A Mail From Profile Website",
+                    Body : "name:" + name + "<br> Email:" + email + "<br/>Contact:" + contact + "<br/>Subject:" + subject + "<br/>message:" + message
+                }).then(
+                message => alert(message)
+                );
+    }
+
+
+      </script>
+      
+  </div>
+</section>
+<footer>
+  <div class="follow">
+    <a href="https://www.facebook.com/merinkanth.nagaraj?mibextid=ZbWKwL" target="_blank">
+        <ion-icon name="logo-facebook"></ion-icon>
+    </a>
+    <a href="https://twitter.com/Merinkanth1?t=BjgX7h0mdeixSg51y8R7mw&s=08" target="_blank">
+        <ion-icon name="logo-twitter"></ion-icon>
+    </a>
+    <a href="https://instagram.com/extreme_merin?igshid=YmMyMTA2M2Y=" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon>
+    </a>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </div> 
+</footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
